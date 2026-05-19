@@ -1,0 +1,244 @@
+Python Projects - 2 (Basics)
+________________________________________
+1. Convert Time (hh, min, sec) into Seconds
+# Convert time into seconds
+
+hours = int(input("Enter hours: "))
+minutes = int(input("Enter minutes: "))
+seconds = int(input("Enter seconds: "))
+
+total_seconds = (hours * 3600) + (minutes * 60) + seconds
+
+print("Total Seconds =", total_seconds)
+Example Execution
+Enter hours: 1
+Enter minutes: 20
+Enter seconds: 30
+
+Total Seconds = 4830
+________________________________________
+2. Celsius to Fahrenheit Conversion
+Temperature Formula:
+F = \frac{9}{5}C + 32
+# Celsius to Fahrenheit
+
+celsius = float(input("Enter temperature in Celsius: "))
+
+fahrenheit = (9 / 5) * celsius + 32
+
+print("Temperature in Fahrenheit =", fahrenheit)
+Example Execution
+Enter temperature in Celsius: 37
+
+Temperature in Fahrenheit = 98.6
+________________________________________
+3. Convert Feet and Inches into Meter and Centimeter
+Conversion Formulas:
+1\ foot = 0.3048\ meter
+1\ inch = 2.54\ centimeter
+# Convert feet and inches into meter and centimeter
+
+feet = float(input("Enter feet: "))
+inches = float(input("Enter inches: "))
+
+meters = feet * 0.3048
+centimeters = inches * 2.54
+
+print("Meters =", meters)
+print("Centimeters =", centimeters)
+Example Execution
+Enter feet: 5
+Enter inches: 10
+
+Meters = 1.524
+Centimeters = 25.4
+________________________________________
+4. Area of Triangle and Rectangle
+Triangle Formula:
+Area = \frac{1}{2} \times base \times height
+Rectangle Formula:
+Area = length \times breadth
+# Area of Triangle
+
+base = float(input("Enter base of triangle: "))
+height = float(input("Enter height of triangle: "))
+
+triangle_area = 0.5 * base * height
+
+print("Area of Triangle =", triangle_area)
+
+# Area of Rectangle
+
+length = float(input("Enter length of rectangle: "))
+breadth = float(input("Enter breadth of rectangle: "))
+
+rectangle_area = length * breadth
+
+print("Area of Rectangle =", rectangle_area)
+Example Execution
+Enter base of triangle: 10
+Enter height of triangle: 5
+Area of Triangle = 25.0
+
+Enter length of rectangle: 8
+Enter breadth of rectangle: 4
+Area of Rectangle = 32.0
+________________________________________
+5. Selling Price of Book
+Selling Price Formula:
+SP = CP - Discount
+# Selling price of book
+
+cost_price = float(input("Enter cost price of book: "))
+discount = float(input("Enter discount amount: "))
+
+selling_price = cost_price - discount
+
+print("Selling Price =", selling_price)
+Example Execution
+Enter cost price of book: 500
+Enter discount amount: 50
+
+Selling Price = 450.0
+________________________________________
+6. Total Salary of Employee
+Salary Formula:
+Total\ Salary = Basic + DA + TA + HRA
+# Total salary calculation
+
+basic = float(input("Enter basic salary: "))
+
+da = 0.10 * basic
+ta = 0.12 * basic
+hra = 0.15 * basic
+
+total_salary = basic + da + ta + hra
+
+print("DA =", da)
+print("TA =", ta)
+print("HRA =", hra)
+print("Total Salary =", total_salary)
+Example Execution
+Enter basic salary: 20000
+
+DA = 2000.0
+TA = 2400.0
+HRA = 3000.0
+Total Salary = 27400.0
+________________________________________
+7. Sum of Three-Digit Number
+# Sum of three-digit number
+
+num = int(input("Enter a three-digit number: "))
+
+digit1 = num // 100
+digit2 = (num // 10) % 10
+digit3 = num % 10
+
+sum_digits = digit1 + digit2 + digit3
+
+print("Sum of digits =", sum_digits)
+Example Execution
+Enter a three-digit number: 456
+
+Sum of digits = 15
+________________________________________
+8. Swap Two Numbers Using Third Variable
+# Swap using third variable
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+temp = a
+a = b
+b = temp
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+Example Execution
+Enter first number: 10
+Enter second number: 20
+
+After swapping:
+a = 20
+b = 10
+________________________________________
+9. Swap Two Numbers Without Using Third Variable
+# Swap without using third variable
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a = a + b
+b = a - b
+a = a - b
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+Example Execution
+Enter first number: 15
+Enter second number: 25
+
+After swapping:
+a = 25
+b = 15
+________________________________________
+10. Reverse Three-Digit Number
+# Reverse three-digit number
+
+num = int(input("Enter a three-digit number: "))
+
+digit1 = num // 100
+digit2 = (num // 10) % 10
+digit3 = num % 10
+
+reverse = (digit3 * 100) + (digit2 * 10) + digit1
+
+print("Reversed Number =", reverse)
+Example Execution
+Enter a three-digit number: 123
+
+Reversed Number = 321
+________________________________________
+11. Minimum Number of Notes
+# Minimum number of notes
+
+amount = int(input("Enter amount: "))
+
+note500 = amount // 500
+amount = amount % 500
+
+note200 = amount // 200
+amount = amount % 200
+
+note100 = amount // 100
+amount = amount % 100
+
+note50 = amount // 50
+amount = amount % 50
+
+note20 = amount // 20
+amount = amount % 20
+
+note10 = amount // 10
+amount = amount % 10
+
+print("500 Notes =", note500)
+print("200 Notes =", note200)
+print("100 Notes =", note100)
+print("50 Notes =", note50)
+print("20 Notes =", note20)
+print("10 Notes =", note10)
+print("Remaining Amount =", amount)
+Example Execution
+Enter amount: 2890
+
+500 Notes = 5
+200 Notes = 1
+100 Notes = 1
+50 Notes = 1
+20 Notes = 2
+10 Notes = 0
+Remaining Amount = 0
