@@ -1,0 +1,246 @@
+Python Basic Projects 1
+
+
+1. Percentage of Student Based on 5 Subjects
+# Percentage of 5 subjects
+
+s1 = float(input("Enter marks of Subject 1: "))
+s2 = float(input("Enter marks of Subject 2: "))
+s3 = float(input("Enter marks of Subject 3: "))
+s4 = float(input("Enter marks of Subject 4: "))
+s5 = float(input("Enter marks of Subject 5: "))
+
+total = s1 + s2 + s3 + s4 + s5
+percentage = total / 5
+
+print("Total Marks =", total)
+print("Percentage =", percentage, "%")
+Example Execution
+Enter marks of Subject 1: 80
+Enter marks of Subject 2: 75
+Enter marks of Subject 3: 90
+Enter marks of Subject 4: 85
+Enter marks of Subject 5: 70
+
+Total Marks = 400.0
+Percentage = 80.0 %
+________________________________________
+2. Area of Rectangle
+# Area of Rectangle
+
+length = float(input("Enter length: "))
+breadth = float(input("Enter breadth: "))
+
+area = length * breadth
+
+print("Area of Rectangle =", area)
+Example Execution
+Enter length: 10
+Enter breadth: 5
+Area of Rectangle = 50.0
+________________________________________
+3. Quotient and Remainder
+# Quotient and Remainder
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+quotient = num1 // num2
+remainder = num1 % num2
+
+print("Quotient =", quotient)
+print("Remainder =", remainder)
+Example Execution
+Enter first number: 25
+Enter second number: 4
+
+Quotient = 6
+Remainder = 1
+________________________________________
+4. Simple Interest
+Simple Interest Formula:
+SI = \frac{P \times T \times R}{100}
+# Simple Interest
+
+P = float(input("Enter Principal Amount: "))
+T = float(input("Enter Time: "))
+R = float(input("Enter Rate of Interest: "))
+
+SI = (P * T * R) / 100
+
+print("Simple Interest =", SI)
+Example Execution
+Enter Principal Amount: 10000
+Enter Time: 2
+Enter Rate of Interest: 5
+
+Simple Interest = 1000.0
+________________________________________
+5. Compound Interest
+Compound Interest Formula:
+CI = P\left(1+\frac{R}{100}\right)^T - P
+# Compound Interest
+
+P = float(input("Enter Principal Amount: "))
+T = float(input("Enter Time: "))
+R = float(input("Enter Rate of Interest: "))
+
+amount = P * (1 + R / 100) ** T
+CI = amount - P
+
+print("Compound Interest =", CI)
+print("Total Amount =", amount)
+Example Execution
+Enter Principal Amount: 10000
+Enter Time: 2
+Enter Rate of Interest: 5
+
+Compound Interest = 1025.0
+Total Amount = 11025.0
+________________________________________
+6. Third Angle of Triangle
+Triangle Angle Formula:
+genui{"math_block_widget_always_prefetch_v2":{"content":"A + B + C = 180^\circ"}}
+# Third Angle of Triangle
+
+angle1 = float(input("Enter first angle: "))
+angle2 = float(input("Enter second angle: "))
+
+third_angle = 180 - (angle1 + angle2)
+
+print("Third Angle =", third_angle)
+Example Execution
+Enter first angle: 60
+Enter second angle: 50
+
+Third Angle = 70.0
+________________________________________
+7. Roots of Quadratic Equation
+Quadratic Formula:
+genui{"math_block_widget_always_prefetch_v2":{"content":"x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}"}}
+# Roots of Quadratic Equation
+
+import math
+
+a = float(input("Enter value of a: "))
+b = float(input("Enter value of b: "))
+c = float(input("Enter value of c: "))
+
+d = (b ** 2) - (4 * a * c)
+
+if d > 0:
+    root1 = (-b + math.sqrt(d)) / (2 * a)
+    root2 = (-b - math.sqrt(d)) / (2 * a)
+
+    print("Root 1 =", root1)
+    print("Root 2 =", root2)
+
+elif d == 0:
+    root = -b / (2 * a)
+
+    print("Both roots are equal")
+    print("Root =", root)
+
+else:
+    print("Roots are imaginary")
+Example Execution
+Enter value of a: 1
+Enter value of b: -5
+Enter value of c: 6
+
+Root 1 = 3.0
+Root 2 = 2.0
+________________________________________
+8. Convert Days into Years, Weeks and Days
+# Convert Days into Years, Weeks and Days
+
+days = int(input("Enter number of days: "))
+
+years = days // 365
+remaining_days = days % 365
+
+weeks = remaining_days // 7
+days_left = remaining_days % 7
+
+print("Years =", years)
+print("Weeks =", weeks)
+print("Days =", days_left)
+Example Execution
+Enter number of days: 400
+
+Years = 1
+Weeks = 5
+Days = 0
+________________________________________
+9. Area of Triangle
+Triangle Area Formula:
+Area = \frac{1}{2} \times base \times height
+# Area of Triangle
+
+base = float(input("Enter base: "))
+height = float(input("Enter height: "))
+
+area = 0.5 * base * height
+
+print("Area of Triangle =", area)
+Example Execution
+Enter base: 10
+Enter height: 5
+
+Area of Triangle = 25.0
+________________________________________
+10. Area of Equilateral Triangle
+Equilateral Triangle Formula:
+Area = \frac{\sqrt{3}}{4}a^2
+# Area of Equilateral Triangle
+
+import math
+
+side = float(input("Enter side of triangle: "))
+
+area = (math.sqrt(3) / 4) * side * side
+
+print("Area of Equilateral Triangle =", area)
+Example Execution
+Enter side of triangle: 6
+
+Area of Equilateral Triangle = 15.588457268119894
+________________________________________
+11. Area and Circumference of Circle
+Circle Formulas:
+Area = \pi r^2
+Circumference = 2\pi r
+# Area and Circumference of Circle
+
+import math
+
+radius = float(input("Enter radius: "))
+
+area = math.pi * radius * radius
+circumference = 2 * math.pi * radius
+
+print("Area of Circle =", area)
+print("Circumference of Circle =", circumference)
+Example Execution
+Enter radius: 7
+
+Area of Circle = 153.93804002589985
+Circumference of Circle = 43.982297150257104
+________________________________________
+12. Volume of Sphere
+Sphere Volume Formula:
+Volume = \frac{4}{3}\pi r^3
+# Volume of Sphere
+
+import math
+
+radius = float(input("Enter radius: "))
+
+volume = (4 / 3) * math.pi * radius ** 3
+
+print("Volume of Sphere =", volume)
+Example Execution
+Enter radius: 3
+
+Volume of Sphere = 113.09733552923254
+
