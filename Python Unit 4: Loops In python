@@ -1,0 +1,196 @@
+Python Projects – 4 (Looping) Statements 
+1. Print all even numbers until n
+n = int(input("Enter number: "))
+
+for i in range(2, n + 1, 2):
+    print(i)
+Output
+Enter number: 10
+2
+4
+6
+8
+10
+________________________________________
+2. Print all odd numbers until n
+n = int(input("Enter number: "))
+
+for i in range(1, n + 1, 2):
+    print(i)
+Output
+Enter number: 10
+1
+3
+5
+7
+9
+________________________________________
+3. Print sum of series up to n
+n = int(input("Enter number: "))
+sum = 0
+
+for i in range(1, n + 1):
+    sum = sum + i
+
+print("Sum =", sum)
+Output
+Enter number: 5
+Sum = 15
+________________________________________
+4. Factorial of a number
+n = int(input("Enter number: "))
+fact = 1
+
+for i in range(1, n + 1):
+    fact = fact * i
+
+print("Factorial =", fact)
+Output
+Enter number: 5
+Factorial = 120
+________________________________________
+5. Fibonacci series up to n
+n = int(input("Enter number: "))
+
+a = 0
+b = 1
+
+print(a)
+print(b)
+
+for i in range(2, n):
+    c = a + b
+    print(c)
+    a = b
+    b = c
+Output
+Enter number: 7
+0
+1
+1
+2
+3
+5
+8
+________________________________________
+6. Check prime number
+n = int(input("Enter number: "))
+count = 0
+
+for i in range(1, n + 1):
+    if n % i == 0:
+        count += 1
+
+if count == 2:
+    print("Prime Number")
+else:
+    print("Not Prime Number")
+Output
+Enter number: 7
+Prime Number
+________________________________________
+7. Print numbers not divisible by 2 and 3
+n = int(input("Enter number: "))
+
+for i in range(1, n + 1):
+    if i % 2 != 0 and i % 3 != 0:
+        print(i)
+Output
+Enter number: 15
+1
+5
+7
+11
+13
+________________________________________
+8. Numbers divisible by 7 and multiple of 5
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+
+for i in range(start, end + 1):
+    if i % 7 == 0 and i % 5 == 0:
+        print(i)
+Output
+Enter start: 1
+Enter end: 200
+35
+70
+105
+140
+175
+________________________________________
+9. Numbers divisible by given number
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+n = int(input("Enter divisor: "))
+
+for i in range(start, end + 1):
+    if i % n == 0:
+        print(i)
+Output
+Enter start: 1
+Enter end: 20
+Enter divisor: 4
+4
+8
+12
+16
+20
+________________________________________
+10. Perfect Number
+n = int(input("Enter number: "))
+sum = 0
+
+for i in range(1, n):
+    if n % i == 0:
+        sum = sum + i
+
+if sum == n:
+    print("Perfect Number")
+else:
+    print("Not Perfect Number")
+Output
+Enter number: 6
+Perfect Number
+________________________________________
+11. Strong Number
+n = int(input("Enter number: "))
+temp = n
+sum = 0
+
+while n > 0:
+    digit = n % 10
+    fact = 1
+
+    for i in range(1, digit + 1):
+        fact = fact * i
+
+    sum = sum + fact
+    n = n // 10
+
+if sum == temp:
+    print("Strong Number")
+else:
+    print("Not Strong Number")
+Output
+Enter number: 145
+Strong Number
+________________________________________
+12. Armstrong Number
+n = int(input("Enter number: "))
+temp = n
+power = len(str(n))
+sum = 0
+
+while n > 0:
+    digit = n % 10
+    sum = sum + digit ** power
+    n = n // 10
+
+if sum == temp:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+Output
+Enter number: 153
+Armstrong Number
